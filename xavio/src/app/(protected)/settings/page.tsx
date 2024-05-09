@@ -35,6 +35,7 @@ import { useCurrentUser } from "@/hooks/use-current-user";
 import { FormSuccess } from "@/components/form-success";
 import { FormError } from "@/components/form-error";
 import { UserRole } from "@prisma/client";
+import { LogoutButton } from "@/components/auth/logout";
 
 const SettingsPage = () => {
   const user = useCurrentUser();
@@ -79,6 +80,9 @@ const SettingsPage = () => {
           </p>
         </CardHeader>
         <CardContent>
+          <LogoutButton>
+            <p>adios</p>
+          </LogoutButton>
           <Form {...form}>
             <form 
               className="space-y-6" 

@@ -9,10 +9,8 @@ import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useCurrentUser } from "@/hooks/use-current-user";
-import { NavbarSession } from "@/app/(protected)/s/[id]/_components/navbar-session";
 
 export function NavbarDemo() {
-  const user = useCurrentUser();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -21,18 +19,16 @@ export function NavbarDemo() {
 
   return (
     <>
-    {user?.id ? (
-      <NavbarSession idUser={user.id}/>
-    ) : (
-      <div className="relative w-full flex items-center justify-center">
+      <div className="w-full flex items-center justify-center relative inset-x-0 z-50">
         <Navbar className=" top-2 " menuOpen={menuOpen} toggleMenu={toggleMenu} />
       </div>
-    )}
     </>
     
   );
 }
+
 function Navbar({ className, menuOpen, toggleMenu }: { className?: string; menuOpen: boolean; toggleMenu: () => void }) {
+  const user = useCurrentUser();
   return (
     <div className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 ", className)}>
       <Menu setActive={() => {}} menuOpen={menuOpen}>
@@ -50,12 +46,22 @@ function Navbar({ className, menuOpen, toggleMenu }: { className?: string; menuO
           </div>
           {/* Aquí se mantiene la lógica para mostrar los elementos del menú */}
           <div className={`md:flex flex-col md:flex-row ${menuOpen ? 'block'  : 'hidden'} md:space-x-20 mt-4 md:mt-0`}>
-          <LoginButton mode="modal" asChild>
-              <Button className="bg-transparent hover:bg-zinc-600 transition-colors duration-300">
-                LogIn
-              </Button>
-          </LoginButton>
-          <Link href='/auth/register'>SignIn</Link>
+            {user?.id ? (
+              <>
+                <Link href={`/s/advances`}>Advance</Link>
+                <Link href={`/s/courses/chat`}>Courses</Link>
+                <Link href={`/s`}>Profile</Link>
+              </>
+            ) : (
+              <>
+                <LoginButton mode="modal" asChild>
+                <Button className="bg-transparent hover:bg-zinc-600 transition-colors duration-300">
+                  LogIn
+                </Button>
+                </LoginButton>
+                <Link href='/auth/register'>SignIn</Link>
+              </>
+            )}
           </div>
         </div>
       </Menu>

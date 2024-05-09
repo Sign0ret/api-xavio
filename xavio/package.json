@@ -33,7 +33,6 @@
     "@tsparticles/slim": "^3.3.0",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
-    "bufferutil": "^4.0.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.1.7",
@@ -52,10 +51,8 @@
     "sonner": "^1.4.41",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "utf-8-validate": "^5.0.10",
     "uuid": "^9.0.1",
     "vaul": "^0.9.0",
-    "ws": "^8.17.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {

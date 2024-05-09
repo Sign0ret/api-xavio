@@ -3,14 +3,16 @@ import { Server as webSocketServer } from 'socket.io';
 import http from 'http';
 import sockets from './sockets';
 import { connectDB } from './db';
-
+import {config} from 'dotenv';
+config();
 connectDB();
+
 
 const server = http.createServer(app);
 
 const io = new webSocketServer(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: process.env.PORT,
     methods: ["GET", "POST"],
     credentials: true
   }

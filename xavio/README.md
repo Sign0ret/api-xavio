@@ -35,3 +35,16 @@
 
 # Magic command
 - hacer que algo aparezca por encima de lo otro.
+- relative inset-x-0 z-50
+
+# MongoDB
+- show dbs
+- use Cursos
+- use Chats
+- show collections
+- db.messages.find()
+- page chat
+- boilerplate
+- folder socket
+- npm i socket.io
+- npm i socket.io-client
