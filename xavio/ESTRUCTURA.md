@@ -1,0 +1,125 @@
+## Hackatón interno
+- Establecer la estructura
+    - Nextjs
+    - Auth
+        - Actions
+            - Login
+            - Logout
+            - Register
+            - Confirm Account (email)
+            - Enable 2 factor auth
+    - Middleware
+        - Actions
+            - Validate
+    - Express
+    - Layout principal
+        - NavBar
+        - Tema de fondo
+        - Font family
+- Establecer la sección de tus clases
+    - Layout
+        - SideBar Participantes 
+    - Página (clases)
+        - REALTIME CHAT
+        - SideBar Bloques
+    - Actions
+        - CRUD materias
+        - CRUD participantes
+        - SERVER Realtime chat
+        - CRUD bloques
+    - Componentes
+        - SideBarChats
+            - Chat
+        - SideBarBlocks
+            - Tema
+            - Quiz
+            - Tarea
+        - Bloques de chat
+            - Mensaje normal
+            - Mensaje Foto/Galeria/Video
+            - Mensaje audio
+        
+- Establecer la sección de tu avance
+    - Layout
+    - Página (avance)
+        - Busqueda
+        - Recomendados
+    - Cursos/
+        - Layout
+        - Página (curso)
+            - Sidebar Cursos
+            - Curso Content
+            - AI creator bar
+        - Actions
+            - CRUD Cursos
+            - FETCH Curso Content
+            - AI Creator
+        - Componentes
+            - Curso
+            - Searchbar
+            - Contenido Curso
+            - AI Bar
+    - Componentes
+        - Searchbar
+        - Results
+        - Recomandado Card
+    
+- Establecer la sección de tu perfil
+    - Layout
+    - Página
+        - Portafolio Proyectos
+        - Perfil Cuenta
+        - Cursos certificados
+    - Actions
+        - CRUD Usuario
+        - CRUD Proyectos Usuario
+        - CRUD Certificados Usuario
+    - Componentes
+        - Avatar Usuario
+        - Proyectos Card
+        - Certificaciones Card
+
+- Establecer la sección de Tema
+    - Layout
+    - Página (curso)
+        - Sidebar Temas
+        - Tema Profesor
+        - Tema recursos extra AI
+    - Actions
+        - CRUD Temas
+        - FETCH Tema Content
+        - AI Creator
+    - Componentes
+        - Tema
+        - Searchbar
+        - Contenido Tema Profesor
+        - Espacio Notas
+        - Bloque recurso extra AI
+
+- Establecer la sección de Quiz
+    - Layout
+    - Página
+        - Contexto Quiz
+        - Quiz 
+            - Quiz Description
+            - Quiz Switch
+            - Quiz Answer
+            - Quiz Results
+            - Quiz Others
+    - Actions
+        - CRUD Quiz
+    - Componentes
+        - Quiz Context card
+        - Pregunta Opción Múltiple
+        - Quiz Form
+
+- Establecer la sección de Tarea
+    - Layout
+    - Página
+        - Contexto Tarea
+    - Actions
+        - CRUD Tarea
+    - Componentes
+        - Tarea Context Card
+        - Tarea Title - Calis
+        - Tarea Form
